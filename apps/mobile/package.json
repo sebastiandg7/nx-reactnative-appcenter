@@ -60,6 +60,7 @@
     "ts-node": "*",
     "typescript": "*",
     "vite": "*",
-    "vitest": "*"
+    "vitest": "*",
+    "esbuild": "*"
   }
 }

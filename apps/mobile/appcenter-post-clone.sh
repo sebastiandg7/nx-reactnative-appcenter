@@ -18,3 +18,9 @@ echo "APPCENTER_ANDROID_MODULE: $APPCENTER_ANDROID_MODULE"
 echo "..."
 echo "[Appcenter React Native specific Environment Variables]"
 echo "APPCENTER_REACTNATIVE_PACKAGE: $APPCENTER_REACTNATIVE_PACKAGE"
+
+if [ -z "$APP_CENTER_CURRENT_PLATFORM" ]
+then
+    echo "You need define the APP_CENTER_CURRENT_PLATFORM variable in App Center with values android or ios"
+    exit
+fi
