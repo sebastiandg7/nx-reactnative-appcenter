@@ -2,6 +2,7 @@ module.exports = function (api) {
   api.cache(true);
 
   if (
+    process.env.APPCENTER_BUILD_ID ||
     process.env.NX_TASK_TARGET_TARGET === 'build' ||
     process.env.NX_TASK_TARGET_TARGET.includes('storybook')
   ) {

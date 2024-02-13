@@ -4,6 +4,7 @@ This repo aims to provide an example react native application under an Nx worksp
 
 Versions used:
 
+- Package manager: `yarn@1`
 - Nx: `18.0.3`
 - React native: `0.73.2`
 - Java JDK: `17.0.10`
