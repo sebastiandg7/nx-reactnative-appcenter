@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 echo "[Post-Build Step] Nx + React Native + Appcenter"
+echo "Current directory: $(pwd)"
 echo "..."
 echo "[Appcenter General Environment Variables]"
 echo "APPCENTER_BUILD_ID: $APPCENTER_BUILD_ID"
