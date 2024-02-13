@@ -6,6 +6,7 @@ Versions used:
 
 - Package manager: `yarn@1`
 - Nx: `18.0.3`
+- Node: `18.X`
 - React native: `0.73.2`
 - Java JDK: `17.0.10`
 
