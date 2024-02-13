@@ -38,7 +38,7 @@ export const App = () => {
               testID="heading"
               role="heading"
             >
-              Welcome Mobile 👋
+              Welcome MyMobileApp 👋
             </Text>
           </View>
           <View style={styles.section}>
@@ -516,7 +516,7 @@ export const App = () => {
               </View>
               <View style={[styles.codeBlock, styles.marginBottomLg]}>
                 <Text style={[styles.textXS, styles.monospace]}>
-                  nx show project Mobile --web
+                  nx show project mobile --web
                 </Text>
               </View>
               <View style={styles.listItem}>
