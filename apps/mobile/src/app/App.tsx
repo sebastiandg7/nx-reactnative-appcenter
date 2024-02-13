@@ -11,6 +11,8 @@ import {
   Linking,
 } from 'react-native';
 import Svg, { G, Path } from 'react-native-svg';
+import { Button } from '@myorg/ui';
+import { utils } from '@myorg/utils';
 
 export const App = () => {
   const [whatsNextYCoord, setWhatsNextYCoord] = useState<number>(0);
@@ -40,6 +42,8 @@ export const App = () => {
             >
               Welcome MyMobileApp 👋
             </Text>
+            <Button title="My button">Hello, world.</Button>
+            <Text style={styles.textMd}>{utils()}</Text>
           </View>
           <View style={styles.section}>
             <View style={styles.hero}>
