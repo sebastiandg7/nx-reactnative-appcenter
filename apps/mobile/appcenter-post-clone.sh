@@ -21,13 +21,13 @@ echo "APPCENTER_REACTNATIVE_PACKAGE: $APPCENTER_REACTNATIVE_PACKAGE"
 
 if [ -z "$APP_CENTER_CURRENT_PLATFORM"  ]
 then
-    echo "You need define the APP_CENTER_CURRENT_PLATFORM variable in App Center with values android or ios"
-    exit 1
+    echo "You need define the APP_CENTER_CURRENT_PLATFORM variable in App Center with values android or ios";
+    exit 1;
 fi
 
 cd $APPCENTER_SOURCE_DIRECTORY
 yarn install
-cp yarn.lock ./apps/mobile/yarn.lock
-yarn nx sync-deps mobile
-yarn nx ensure-symlink mobile
-cd apps/mobile
+cp yarn.lock ./$APPCENTER_NX_PROJECT_DIR/yarn.lock
+yarn nx sync-deps $APPCENTER_NX_PROJECT
+yarn nx ensure-symlink $APPCENTER_NX_PROJECT
+cd $APPCENTER_NX_PROJECT_DIR
