@@ -2,6 +2,12 @@
 
 This repo aims to provide an example react native application under an Nx workspace using [AppCenter](https://appcenter.ms/) for it's CI/CD.
 
+Versions used:
+
+- Nx: `18.0.3`
+- React native: `0.73.2`
+- Java JDK: `17.0.10`
+
 # Configuration
 
 To make things work in AppCenter, we need to tune our project configuration as follows.
@@ -31,4 +37,4 @@ The following are the custom environment variables to need to add in the AppCent
 | `APP_CENTER_CURRENT_PLATFORM` | `android` or `ios`    | both     |
 | `APPCENTER_NX_PROJECT`        | `mobile`              | both     |
 | `APPCENTER_NX_PROJECT_DIR`    | `apps/mobile`         | both     |
-| `JAVA_HOME`                   | `$(JAVA_HOME_11_X64)` | android  |
+| `JAVA_HOME`                   | `$(JAVA_HOME_17_X64)` | android  |
