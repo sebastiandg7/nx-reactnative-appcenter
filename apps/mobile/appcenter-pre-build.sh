@@ -21,4 +21,4 @@ echo "[Appcenter React Native specific Environment Variables]"
 echo "APPCENTER_REACTNATIVE_PACKAGE: $APPCENTER_REACTNATIVE_PACKAGE"
 
 cd $APPCENTER_SOURCE_DIRECTORY
-yarn nx build-andriod $APPCENTER_NX_PROJECT
+yarn nx build-android $APPCENTER_NX_PROJECT
