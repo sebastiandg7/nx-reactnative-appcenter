@@ -61,5 +61,12 @@
         "componentTestingTargetName": "component-test"
       }
     }
-  ]
+  ],
+  "targetDefaults": {
+    "@nx/rollup:rollup": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
+    }
+  }
 }
