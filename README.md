@@ -15,7 +15,11 @@ Project progress:
 |Platform|Status|
 |-|-|
 |Android <img width="16" alt="image" src="https://simpleicons.org/icons/android.svg">|`working` ✅|
-|iOS <img width="16" alt="image" src="https://simpleicons.org/icons/apple.svg">|`in progress` ⏳|
+|iOS <img width="16" alt="image" src="https://simpleicons.org/icons/apple.svg">|`working` ✅|
+
+# Workspace layout
+
+<img width="756" alt="image" src="https://github.com/sebastiandg7/nx-reactnative-appcenter/assets/13395979/7bce8ee4-0eb7-4cde-b640-0e7a13047ec7">
 
 # Configuration
 
@@ -25,17 +29,31 @@ To make things work in AppCenter, we need to tune our project configuration as f
 
 Go ahead to AppCenter and create an Android project and an iOS project for your react native app.
 
-### Android
+1. Create the AppCenter project using `React Native` as platform and `Android`/`iOS` as OS.
 
-TODO.
+Android
+<img width="601" alt="image" src="https://github.com/sebastiandg7/nx-reactnative-appcenter/assets/13395979/0c13f290-3833-4511-8075-0b61f2e193ec">
 
-### iOS
+iOS
+<img width="601" alt="image" src="https://github.com/sebastiandg7/nx-reactnative-appcenter/assets/13395979/08582fad-a743-4c96-ab35-60bc6661a944">
 
-TODO.
+2. Add build configuration to your branch using the app's `package.json`, not the workspace root `package.json`.
+
+<img width="756" alt="image" src="https://github.com/sebastiandg7/nx-reactnative-appcenter/assets/13395979/00c97adb-5b98-4bde-89e4-a292fd361d3a">
+
+3. Envrionment variables
+
+Refer to the [environment variables section](#appcenter-environment-variables) about what to add for each platform build configuration.
+
 
 ## Custom build scripts
 
-TODO
+Using [AppCenter custom build scripts](https://learn.microsoft.com/en-us/appcenter/build/custom/scripts/) we can setup the Nx workspace dependencies so that workspace libs are included in our build.
+
+Check the following scripts:
+
+- `apps/mobile/appcenter-post-clone.sh`
+
 
 ## AppCenter environment variables
 
