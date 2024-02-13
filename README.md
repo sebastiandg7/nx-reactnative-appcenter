@@ -10,12 +10,17 @@ Versions used:
 - React native: `0.73.2`
 - Java JDK: `17.0.10`
 
-Project progress:
+| Platform                                                                                                                                         | Status       |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------ |
+| Android <img width="16" alt="image" src="https://simpleicons.org/icons/android.svg" style="filter: opacity(0.5) drop-shadow(0 0 0 lightgreen);"> | `working` ✅ |
+| iOS <img width="16" alt="image" src="https://simpleicons.org/icons/apple.svg" style="filter: opacity(0.5) drop-shadow(0 0 0 white);">            | `working` ✅ |
 
-|Platform|Status|
-|-|-|
-|Android <img width="16" alt="image" src="https://simpleicons.org/icons/android.svg">|`working` ✅|
-|iOS <img width="16" alt="image" src="https://simpleicons.org/icons/apple.svg">|`working` ✅|
+## Backlog
+
+- [ ] Reusable AppCenter custom build scripts
+- [ ] Only run if `mobile` Nx project is affected by the changes
+- [ ] Cache `node_modules` dependencies
+- [ ] Cache Pod dependencies for iOS
 
 # Workspace layout
 
@@ -45,7 +50,6 @@ iOS
 
 Refer to the [environment variables section](#appcenter-environment-variables) about what to add for each platform build configuration.
 
-
 ## Custom build scripts
 
 Using [AppCenter custom build scripts](https://learn.microsoft.com/en-us/appcenter/build/custom/scripts/) we can setup the Nx workspace dependencies so that workspace libs are included in our build.
@@ -53,7 +57,6 @@ Using [AppCenter custom build scripts](https://learn.microsoft.com/en-us/appcent
 Check the following scripts:
 
 - `apps/mobile/appcenter-post-clone.sh`
-
 
 ## AppCenter environment variables
 
