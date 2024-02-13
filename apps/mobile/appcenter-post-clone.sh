@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo "[Pre-Clone Step] Nx + React Native + Appcenter"
+echo "[Post-Clone Step] Nx + React Native + Appcenter"
 echo "..."
 echo "[Appcenter General Environment Variables]"
 echo "APPCENTER_BUILD_ID: $APPCENTER_BUILD_ID"
@@ -19,8 +19,15 @@ echo "..."
 echo "[Appcenter React Native specific Environment Variables]"
 echo "APPCENTER_REACTNATIVE_PACKAGE: $APPCENTER_REACTNATIVE_PACKAGE"
 
-if [ -z "$APP_CENTER_CURRENT_PLATFORM" ]
+if [ -z "$APP_CENTER_CURRENT_PLATFORM"  ]
 then
     echo "You need define the APP_CENTER_CURRENT_PLATFORM variable in App Center with values android or ios"
-    exit
+    exit 1
 fi
+
+cd $APPCENTER_SOURCE_DIRECTORY
+yarn install
+cp yarn.lock ./apps/mobile/yarn.lock
+yarn nx sync-deps mobile
+yarn nx ensure-symlink mobile
+cd apps/mobile

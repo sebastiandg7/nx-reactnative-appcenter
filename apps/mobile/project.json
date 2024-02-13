@@ -3,6 +3,11 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/mobile/src",
   "projectType": "application",
-  "targets": {},
+  "targets": {
+    "ensure-symlink":{
+      "executor": "@nx/react-native:ensure-symlink",
+      "options": {}
+    }
+  },
   "tags": []
 }
