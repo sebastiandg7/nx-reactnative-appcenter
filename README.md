@@ -18,7 +18,7 @@ Versions used:
 ## Backlog
 
 - [x] Re-use workspace dependencies installation
-- [x] Reusable AppCenter custom build scripts
+- [x] Reusable AppCenter custom build scripts via [zx](https://github.com/google/zx)
 - [ ] Only run if `mobile` Nx project is affected by the changes
 - [ ] Cache `node_modules` dependencies
 - [ ] Cache Pod dependencies for iOS
