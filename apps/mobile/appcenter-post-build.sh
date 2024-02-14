@@ -1,21 +1,5 @@
 #!/usr/bin/env bash
+cd $APPCENTER_SOURCE_DIRECTORY/tools/scripts/appcenter
+npm run zx post-build/post-build.mjs
 
-echo "[Post-Build Step] Nx + React Native + Appcenter"
-echo "Current directory: $(pwd)"
-echo "..."
-echo "[Appcenter General Environment Variables]"
-echo "APPCENTER_BUILD_ID: $APPCENTER_BUILD_ID"
-echo "APPCENTER_BRANCH: $APPCENTER_BRANCH"
-echo "APPCENTER_SOURCE_DIRECTORY: $APPCENTER_SOURCE_DIRECTORY"
-echo "APPCENTER_OUTPUT_DIRECTORY: $APPCENTER_OUTPUT_DIRECTORY"
-echo "..."
-echo "[Appcenter iOS specific Environment Variables]"
-echo "APPCENTER_XCODE_PROJECT: $APPCENTER_XCODE_PROJECT"
-echo "APPCENTER_XCODE_SCHEME: $APPCENTER_XCODE_SCHEME"
-echo "..."
-echo "[Appcenter Android specific Environment Variables]"
-echo "APPCENTER_ANDROID_VARIANT: $APPCENTER_ANDROID_VARIANT"
-echo "APPCENTER_ANDROID_MODULE: $APPCENTER_ANDROID_MODULE"
-echo "..."
-echo "[Appcenter React Native specific Environment Variables]"
-echo "APPCENTER_REACTNATIVE_PACKAGE: $APPCENTER_REACTNATIVE_PACKAGE"
+# Add app specific post-build commands here
