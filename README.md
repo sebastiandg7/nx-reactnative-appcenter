@@ -17,7 +17,8 @@ Versions used:
 
 ## Backlog
 
-- [ ] Reusable AppCenter custom build scripts
+- [x] Re-use workspace dependencies installation
+- [x] Reusable AppCenter custom build scripts
 - [ ] Only run if `mobile` Nx project is affected by the changes
 - [ ] Cache `node_modules` dependencies
 - [ ] Cache Pod dependencies for iOS
@@ -62,12 +63,12 @@ Check the following scripts:
 
 The following are the custom environment variables to need to add in the AppCenter build configuration for each project.
 
-| Name                          | Value                 | Platform |
-| ----------------------------- | --------------------- | -------- |
-| `APP_CENTER_CURRENT_PLATFORM` | `android` or `ios`    | both     |
-| `APPCENTER_NX_PROJECT`        | `mobile`              | both     |
-| `APPCENTER_NX_PROJECT_DIR`    | `apps/mobile`         | both     |
-| `JAVA_HOME`                   | `$(JAVA_HOME_17_X64)` | android  |
+| Name                         | Value                 | Platform |
+| ---------------------------- | --------------------- | -------- |
+| `APPCENTER_CURRENT_PLATFORM` | `android` or `ios`    | both     |
+| `APPCENTER_NX_PROJECT`       | `mobile`              | both     |
+| `APPCENTER_NX_PROJECT_DIR`   | `apps/mobile`         | both     |
+| `JAVA_HOME`                  | `$(JAVA_HOME_17_X64)` | android  |
 
 # Significant changes
 
