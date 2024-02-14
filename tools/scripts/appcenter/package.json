@@ -1,0 +1,16 @@
+{
+  "name": "appcenter-scripts",
+  "version": "1.0.0",
+  "description": "Appcenter custom build scripts",
+  "author": "Sebastian Duque G",
+  "license": "Apache-2.0",
+  "scripts": {
+    "zx": "zx"
+  },
+  "dependencies": {
+    "envalid": "^8.0.0"
+  },
+  "devDependencies": {
+    "zx": "^7.2.3"
+  }
+}
