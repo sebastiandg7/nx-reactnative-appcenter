@@ -1,6 +1,9 @@
 import { cleanEnv, str, num } from 'envalid';
 
-console.log('$.env.APPCENTER_CURRENT_PLATFORM', $.env.APPCENTER_CURRENT_PLATFORM);
+console.log(
+  '$.env.APPCENTER_CURRENT_PLATFORM',
+  $.env.APPCENTER_CURRENT_PLATFORM
+);
 
 const env = cleanEnv($.env, {
   APPCENTER_BUILD_ID: num({ desc: 'The unique identifier for the build' }),
@@ -49,11 +52,11 @@ export const envVars = {
     sourceDirectory: env.APPCENTER_SOURCE_DIRECTORY,
     outputDirectory: env.APPCENTER_OUTPUT_DIRECTORY,
     currentPlatform: env.APPCENTER_CURRENT_PLATFORM,
-    iOS: {
+    iOS: env.APPCENTER_CURRENT_PLATFORM === 'ios' && {
       xcodeProject: env.APPCENTER_XCODE_PROJECT ?? null,
       xcodeScheme: env.APPCENTER_XCODE_SCHEME ?? null,
     },
-    android: {
+    android: env.APPCENTER_CURRENT_PLATFORM === 'android' && {
       variant: env.APPCENTER_ANDROID_VARIANT ?? null,
       module: env.APPCENTER_ANDROID_MODULE ?? null,
     },
