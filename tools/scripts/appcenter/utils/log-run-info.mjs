@@ -1,10 +1,19 @@
 #!/usr/bin/env zx
-import { envVars } from './env/variables.mjs';
+import { envVars } from './env.mjs';
 
 export function logRunInfo() {
   const {
-    appCenter: { buildId, branch, sourceDirectory, outputDirectory },
+    appCenter: {
+      buildId,
+      branch,
+      sourceDirectory,
+      outputDirectory,
+      iOS: { xcodeProject, xcodeScheme },
+      android,
+      reactNative,
+    },
   } = envVars;
+
   echo`Current directory: ${process.cwd()}`;
   echo`...'`;
   echo`[Appcenter General Environment Variables]'`;
@@ -14,15 +23,13 @@ export function logRunInfo() {
   echo`APPCENTER_OUTPUT_DIRECTORY: ${outputDirectory}`;
   echo``;
   echo`[Appcenter iOS specific Environment Variables]'`;
-  echo`APPCENTER_XCODE_PROJECT: `;
-  echo`APPCENTER_XCODE_SCHEME: `;
+  echo`APPCENTER_XCODE_PROJECT: ${xcodeProject}`;
+  echo`APPCENTER_XCODE_SCHEME: ${xcodeScheme}`;
   echo`...'`;
   echo`[Appcenter Android specific Environment Variables]'`;
-  echo`APPCENTER_ANDROID_VARIANT: ' + process.env.APPCENTER_ANDROID_VARIANT`;
-  echo`APPCENTER_ANDROID_MODULE: ' + process.env.APPCENTER_ANDROID_MODULE`;
+  echo`APPCENTER_ANDROID_VARIANT: ${android.variant}`;
+  echo`APPCENTER_ANDROID_MODULE: ${android.module}`;
   echo`...'`;
   echo`[Appcenter React Native specific Environment Variables]'`;
-  echo`APPCENTER_REACTNATIVE_PACKAGE: ' +
-      process.env.APPCENTER_REACTNATIVE_PACKAGE
-  `;
+  echo`APPCENTER_REACTNATIVE_PACKAGE: ${reactNative.package}`;
 }
