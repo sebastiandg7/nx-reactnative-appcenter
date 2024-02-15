@@ -15,17 +15,17 @@ export function logRunInfo() {
   } = envVars;
 
   echo`Current directory: ${process.cwd()}`;
-  echo`...'`;
+  echo`...`;
   echo`[Appcenter General Environment Variables]'`;
   echo`APPCENTER_BUILD_ID: ${buildId}`;
   echo`APPCENTER_BRANCH: ${branch}`;
   echo`APPCENTER_SOURCE_DIRECTORY: ${sourceDirectory}`;
   echo`APPCENTER_OUTPUT_DIRECTORY: ${outputDirectory}`;
-  echo``;
+  echo`...`;
   echo`[Appcenter iOS specific Environment Variables]'`;
   echo`APPCENTER_XCODE_PROJECT: ${xcodeProject}`;
   echo`APPCENTER_XCODE_SCHEME: ${xcodeScheme}`;
-  echo`...'`;
+  echo`...`;
   echo`[Appcenter Android specific Environment Variables]'`;
   echo`APPCENTER_ANDROID_VARIANT: ${android.variant}`;
   echo`APPCENTER_ANDROID_MODULE: ${android.module}`;

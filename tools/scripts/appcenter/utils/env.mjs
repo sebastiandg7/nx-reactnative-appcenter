@@ -1,10 +1,5 @@
 import { cleanEnv, str, num } from 'envalid';
 
-console.log(
-  '$.env.APPCENTER_CURRENT_PLATFORM',
-  $.env.APPCENTER_CURRENT_PLATFORM
-);
-
 const env = cleanEnv($.env, {
   APPCENTER_BUILD_ID: num({ desc: 'The unique identifier for the build' }),
   APPCENTER_BRANCH: str({ desc: 'The branch the build is being run on' }),

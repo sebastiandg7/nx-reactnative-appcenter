@@ -13,6 +13,14 @@
     {
       "files": ["*.js", "*.jsx"],
       "rules": {}
+    },
+    {
+      "files": ["appcenter/**/*.mjs"],
+      "rules": {},
+      "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": 2022
+      }
     }
   ]
 }
