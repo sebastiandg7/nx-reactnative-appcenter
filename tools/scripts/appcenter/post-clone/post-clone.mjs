@@ -8,7 +8,7 @@ logRunInfo();
 cd(envVars.appCenter.sourceDirectory);
 
 // CocoaPods v1.15.0 is broken for hermes-engine
-// Appcenter uses v1.15.0 by default so we need to update it to the latest version
+// Appcenter uses v1.15.0 by default so we need to update it to v1.15.2 (2024-02-15)
 await $`sudo gem uninstall cocoapods`;
 await $`sudo gem install cocoapods -v 1.15.2`;
 
