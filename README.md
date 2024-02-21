@@ -61,7 +61,7 @@ Check the following scripts:
 
 ## AppCenter environment variables
 
-The following are the custom environment variables that need to be add in the AppCenter build configuration for each project.
+The following are the custom environment variables that you need to add in the AppCenter build configuration for each project.
 
 | Name                         | Value                 | Platform |
 | ---------------------------- | --------------------- | -------- |
